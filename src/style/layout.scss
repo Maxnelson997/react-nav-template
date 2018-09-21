@@ -4,12 +4,12 @@
 
     display: grid;
     grid-template-rows: [home-s nav-s] 100px [nav-e content-s] 1fr [content-e home-e];
-    grid-template-columns: [content-s nav-s] 1fr [content-s nav-e];
+    grid-template-columns: [content-s nav-s] 50px [content-inset-s] 1fr [content-inset-e] 50px [content-s nav-e];
 
-    @media only screen and (max-width: 600px) {
-        grid-template-rows: [home-s nav-s] 100px [nav-e content-s] 1fr [content-e home-e];
-        grid-template-columns: [nav-s] 100px [nav-e content-s] 1fr [content-e];
-    }
+    // @media only screen and (max-width: 600px) {
+    //     grid-template-rows: [home-s nav-s] 100px [nav-e content-s] 1fr [content-e home-e];
+    //     grid-template-columns: [nav-s] 100px [nav-e content-s] 1fr [content-e];
+    // }
 
     .navigation {
         grid-row: nav-s/nav-e;
@@ -23,6 +23,11 @@
     &__content {
         grid-row: content-s/content-e;
         grid-column: content-s/content-e;
+    }
+
+    &__content-inset {
+        grid-row: content-s/content-e;
+        grid-column: content-inset-s/content-inset-e;
     }
 
     
