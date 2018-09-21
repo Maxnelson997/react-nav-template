@@ -1,5 +1,9 @@
-# React/Redux Starter Project
+# REACT NAV TEMPLATE
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
+git clone https://github.com/Maxnelson997/react-nav-template
 
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+npm install
+
+npm start 
+
+localhost:3000
