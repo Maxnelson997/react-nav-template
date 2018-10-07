@@ -4,8 +4,14 @@ export default class Home extends Component {
   render() {
     return (
       <div className='home layout__content-inset'>
-        <img className='home__image' src='https://source.unsplash.com/collection/2203755'/>
-        <a className='home__link' target='_blank' href='https://github.com/Maxnelson997/react-nav-template'>VIEW ON GITHUB</a>
+        <h1 className='home__title'>GRID PRACTICE</h1>
+        {/* <img className='home__image' src='https://source.unsplash.com/collection/2203755'/> */}
+        <div className='home__front image-card'>
+          <img src='https://source.unsplash.com/collection/2203755'/>
+        </div>
+        <div className='home__back image-card'>
+          <img src='https://source.unsplash.com/collection/2203755'/>
+        </div>
       </div>
     );
   }

@@ -10,6 +10,7 @@ export default class Navigation extends Component {
         <Link to='/contact'>contact</Link>
         <Link to='/about'>about</Link>
         <Link to='/find'>find</Link>
+        <Link to='/unsplash'>unsplash</Link>
       </div>
     );
   }

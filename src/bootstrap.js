@@ -20,6 +20,7 @@ import Contact from './components/contact';
 import { createBrowserHistory } from 'history';
 import Find from './components/find';
 import About from './components/about';
+import Unsplash from './components/Unsplash';
 
 function main() {
   ReactDOM.render(
@@ -30,7 +31,7 @@ function main() {
             <Route path='/contact'  component={Contact}/>
             <Route path='/about'  component={About}/>
             <Route path='/find'  component={Find}/>
-
+            <Route path='/unsplash'  component={Unsplash}/>
           </Switch>
         </Layout>
       </Router>

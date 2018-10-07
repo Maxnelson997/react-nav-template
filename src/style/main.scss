@@ -21,6 +21,8 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+@import 'variables';
+@import 'mixins';
 @import 'layout';
 @import 'navigation';
 @import 'home';
