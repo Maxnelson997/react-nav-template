@@ -43,13 +43,13 @@
     
     height: 180px !important; 
 
-    &__front, 
-    &__back {
-        @include card-grid;
-    }
+    // &__front, 
+    // &__back {
+    //     @include card-grid;
+    // }
 
     &__front {
-
+        @include card-grid;
         & > * {
             grid-column: 1/-1;
             font-family: $raleway;
@@ -81,6 +81,9 @@
 
 
     &__back {
+        display: grid; 
+        grid-template-rows: 40px 30px 1fr;
+        grid-template-columns: 20px [inset-s] 1fr [inset-e] 20px;
 
         & > * {
             font-family: $raleway;
@@ -100,6 +103,22 @@
             @include card-subtitle-text;
             grid-row: 2/3;
             grid-column: inset-s/inset-e;
+        }
+        &__projects {
+            grid-row: 3/4;
+            grid-column: inset-s/inset-e;
+            justify-self: center;
+            align-self: center;
+
+            display: grid;
+            grid-template-rows: 80px;
+            grid-template-columns: 80px 80px 80px 80px;
+            grid-gap: 40px;
+
+            & > * {
+                grid-row : 1/-1;
+            }
+
         }
     }
 }
