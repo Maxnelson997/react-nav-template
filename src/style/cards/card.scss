@@ -1,53 +1,105 @@
 .card {
+    &__front,
+    &__back {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        transition: all 0.5s ease;
+    }
+
+    -webkit-perspective: 1000px; /* Safari 4-8  */
+    perspective: 1000px;
+
+    &__back {
+        z-index: 101;
+        opacity: 0;
+        transform: rotateY(-180deg);
+    }
+
+    &:hover {
+        .card {
+            &__front {
+                z-index: 100;
+                opacity: 1;
+                transform: rotateY(180deg);
+            }
+            &__back {
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.card {
     display: grid; 
-    grid-template-rows: 40px 30px 1fr;
-    grid-template-columns: 20px [inset-s] 1fr [inset-e] 20px;
-    
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 
     @media only screen and (max-width: $break-point) {
         width: 100%;
         height: 120px !important;
     }
-    height: 180px !important;
-
-
-
-
-    // align-self: center;
     
-    // height: 150px;
+    height: 180px !important; 
 
-    & > * {
-        grid-column: 1/-1;
-        font-family: $raleway;
+    &__front, 
+    &__back {
+        @include card-grid;
     }
 
-    &__title {
-        align-self: end;
-        z-index: 12;
-        font-size: 16px;
-        color: ghostwhite;
-        grid-row: 1/2;
-        grid-column: inset-s/inset-e;
+    &__front {
+
+        & > * {
+            grid-column: 1/-1;
+            font-family: $raleway;
+        }
+    
+        &__title {
+            @include card-title-text;
+            grid-row: 1/2;
+            grid-column: inset-s/inset-e;
+        }
+        &__subtitle {
+            @include card-subtitle-text;
+            grid-row: 2/3;
+            grid-column: inset-s/inset-e;
+        }
+        &__img-overlay {
+            z-index: 11;
+            grid-row: 1/-1;
+            background-color: rgba(0, 0, 0, 0.568);
+        }
+        &__img {
+            z-index: 10;
+            grid-row: 1/-1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
-    &__subtitle {
-        align-self: start;
-        z-index: 12;
-        font-size: 12px;
-        color: ghostwhite;
-        grid-row: 2/3;
-        grid-column: inset-s/inset-e;
-    }
-    &__img-overlay {
-        z-index: 11;
-        grid-row: 1/-1;
-        background-color: rgba(0, 0, 0, 0.568);
-    }
-    &__img {
-        z-index: 10;
-        grid-row: 1/-1;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+
+
+    &__back {
+
+        & > * {
+            font-family: $raleway;
+        }
+
+        &__bg {
+            background-color: rgba(83, 83, 83, 0.76);
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+        }
+        &__title {
+            @include card-title-text;
+            grid-row: 1/2;
+            grid-column: inset-s/inset-e;
+        }
+        &__info {
+            @include card-subtitle-text;
+            grid-row: 2/3;
+            grid-column: inset-s/inset-e;
+        }
     }
 }

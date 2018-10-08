@@ -1,5 +1,4 @@
 .home {
-
     display: grid;
     grid-template-rows: [page-title-s] 100px [page-title-e content-s] 1fr [content-e];
     grid-template-columns: 1fr;
@@ -19,6 +18,5 @@
         grid-column: 1/-1;
         justify-self: center;
         align-self: center;
-        
     }
 }

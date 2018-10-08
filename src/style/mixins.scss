@@ -9,3 +9,23 @@
     font-size: 14px;
     color: $color;
 }
+
+@mixin card-grid() {
+    display: grid; 
+    grid-template-rows: 40px 30px 1fr;
+    grid-template-columns: 20px [inset-s] 1fr [inset-e] 20px;
+}
+
+@mixin card-subtitle-text() {
+    align-self: start;
+    z-index: 12;
+    font-size: 12px;
+    color: ghostwhite;
+}
+
+@mixin card-title-text() {
+    align-self: end;
+    z-index: 12;
+    font-size: 16px;
+    color: ghostwhite;
+}

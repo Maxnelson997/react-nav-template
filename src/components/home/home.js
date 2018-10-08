@@ -14,14 +14,22 @@ class Home extends Component {
                 title: 'Course Development',
                 subtitle: 'Courses I\'ve developed for udemy and bootcamps',
                 imageUrl: ' https://source.unsplash.com/collection/1816977/1600x900',
-                height: 'auto'
+                height: 'auto',
+                back: {
+                    title: 'Courses',
+                    info: 'I build stuff'
+                }
             },
             {
                 _id: 1,
                 title: 'Web Development',
                 subtitle: 'Websites I\'ve built for myself and companies',
                 imageUrl: ' https://source.unsplash.com/collection/1144691/1600x900',
-                height: 'auto'
+                height: 'auto',
+                back: {
+                    title: 'Courses',
+                    info: 'I build stuff'
+                }
             },
             
             {
@@ -29,15 +37,22 @@ class Home extends Component {
                 title: 'iOS Development',
                 subtitle: 'iOS App Projects I\'ve developed for other companies.',
                 imageUrl: ' https://source.unsplash.com/collection/2737036/1600x900',
-                height: 'auto'
+                height: 'auto',
+                back: {
+                    title: 'Courses',
+                    info: 'I build stuff'
+                }
             },
-            
             {
                 _id: 3,
                 title: 'Photo + Video',
                 subtitle: 'I keep life balanced. See my photo and video projects here.',
                 imageUrl: ' https://source.unsplash.com/collection/1424240/1600x900',
-                height: 'auto'
+                height: 'auto',
+                back: {
+                    title: 'Courses',
+                    info: 'I build stuff'
+                }
             },
             
         ]
