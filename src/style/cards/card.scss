@@ -1,0 +1,42 @@
+.card {
+    display: grid; 
+    grid-template-rows: 40px 30px 1fr;
+    grid-template-columns: 40px [inset-s] 1fr [inset-e] 40px;
+    
+    width: 500px;
+    // height: 150px;
+
+    & > * {
+        grid-column: 1/-1;
+        font-family: $raleway;
+    }
+
+    &__title {
+        align-self: end;
+        z-index: 12;
+        font-size: 16px;
+        color: ghostwhite;
+        grid-row: 1/2;
+        grid-column: inset-s/inset-e;
+    }
+    &__subtitle {
+        align-self: start;
+        z-index: 12;
+        font-size: 12px;
+        color: ghostwhite;
+        grid-row: 2/3;
+        grid-column: inset-s/inset-e;
+    }
+    &__img-overlay {
+        z-index: 11;
+        grid-row: 1/-1;
+        background-color: rgba(0, 0, 0, 0.568);
+    }
+    &__img {
+        z-index: 10;
+        grid-row: 1/-1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

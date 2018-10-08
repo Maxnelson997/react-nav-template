@@ -1,3 +1,24 @@
 .home {
-    
+
+    display: grid;
+    grid-template-rows: [page-title-s] 100px [page-title-e content-s] 1fr [content-e];
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+    &__page-title {
+        grid-row: page-title-s/page-title-e;
+    }
+    &__content {
+        grid-row: content-s/content-e;
+    }
+    &__typewriter {
+        grid-row: content-s/content-e;
+        grid-column: 1/-1;
+        justify-self: center;
+        align-self: center;
+        
+    }
 }
