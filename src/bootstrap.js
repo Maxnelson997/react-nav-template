@@ -14,7 +14,7 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 import './style/main.scss';
 
 import Layout from './components/Layout';
-import Home from './components/home';
+import Home from './components/home/home';
 import Contact from './components/contact';
 
 import { createBrowserHistory } from 'history';

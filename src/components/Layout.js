@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Navigation from './navigation';
+import Nav from './nav/nav';
 
 export default class Layout extends Component {
   render() {
     return (
       <div className='layout'>
-        <Navigation/>
+        <Nav className='layout__nav-inset'/>
         {this.props.children}
       </div>
     );
