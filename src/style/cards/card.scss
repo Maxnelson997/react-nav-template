@@ -1,9 +1,17 @@
 .card {
     display: grid; 
     grid-template-rows: 40px 30px 1fr;
-    grid-template-columns: 40px [inset-s] 1fr [inset-e] 40px;
+    grid-template-columns: 20px [inset-s] 1fr [inset-e] 20px;
     
-    width: 500px;
+
+    @media only screen and (max-width: $break-point) {
+        width: 100%;
+    }
+
+
+
+    // align-self: center;
+    
     // height: 150px;
 
     & > * {

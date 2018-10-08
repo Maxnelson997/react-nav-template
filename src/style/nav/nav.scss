@@ -31,6 +31,10 @@
     grid-template-columns: auto;
     grid-column-gap: 12px;
 
+    @media only screen and (max-width: $break-point) {
+        display: none;
+    }
+
     & > * {
         grid-row: 1/-1;
     }
