@@ -1,0 +1,40 @@
+.footer {
+    display: grid;
+    grid-template-rows: [title-s links-s] 1fr [title-e links-e line-s] 0.2px [line-e trademark-s] .75fr [trade-mark-e];
+    grid-template-columns: [line-s title-s] 1fr [title-e links-s] 1fr [links-e line-e];
+
+    grid-row-gap: 14px;;
+
+    &__title {
+        grid-row: title-s/title-e;
+        grid-column: title-s/title-e;
+
+        @include header-text($color: black)
+    }
+
+
+    &__links {
+        justify-self: end;
+        grid-row: links-s/links-e;
+        grid-column: links-s/links-e;
+
+        & > * {
+            @include header-text($color: black);
+            text-decoration: none;
+        }
+
+    }
+
+    &__line {
+        grid-row: line-s/line-e;
+        grid-column: line-s/line-e;
+        border-bottom: 1px solid $opaque-gray;
+    }
+
+    &__trademark {
+        @include header-text;
+        grid-row: trademark-s/trademark-e;
+        grid-column: 1/-1;
+    }
+}
+

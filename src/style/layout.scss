@@ -4,7 +4,7 @@
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 40px [home-s nav-s] 100px [nav-e content-s] 1fr [content-e home-e];
+    grid-template-rows: 40px [home-s nav-s] 100px [nav-e content-s] 1fr [content-e home-e footer-s] 100px [footer-e] 40px;
     grid-template-columns: [content-s nav-s] $layout-inset [content-inset-s] 10px [nav-inset-s] 1fr [content-inset-e] 10px [nav-inset-e] $layout-inset [content-s nav-e];
 
     // @media only screen and (max-width: 600px) {
@@ -35,6 +35,13 @@
 
     &__nav-inset {
         grid-row: nav-s/nav-e;
+        grid-column: nav-inset-s/nav-inset-e;
+    }
+
+
+    &__footer-inset {
+        align-self: end;
+        grid-row: footer-s/footer-e;
         grid-column: nav-inset-s/nav-inset-e;
     }
 
