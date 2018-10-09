@@ -16,14 +16,14 @@ class Typewriter extends Component {
         TxtType.prototype.tick = function() {
             var i = this.loopNum % this.toRotate.length;
             var fullTxt = this.toRotate[i];
-    
+            
             if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
             } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
             }
     
-            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+            this.el.innerHTML = '<span class="wrap">'+'I '+this.txt+'</span>';
     
             var that = this;
             var delta = 200 - Math.random() * 100;
@@ -31,16 +31,16 @@ class Typewriter extends Component {
             if (this.isDeleting) { delta /= 2; }
     
             if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
+                delta = this.period;
+                this.isDeleting = true;
             } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
             }
     
             setTimeout(function() {
-            that.tick();
+                that.tick();
             }, delta);
         };
     
@@ -55,6 +55,28 @@ class Typewriter extends Component {
                 }
             }
         }, 2000);
+
+        // INJECT CSS
+        var css = document.createElement("style");
+
+        css.type = "text/css";
+ 
+        css.innerHTML = `.typewrite > .wrap {
+        
+            border-right: 2px solid rgba(120, 120, 120, 0.733);
+            padding-top: 4px;
+            -webkit-animation-name: cursor; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: cursor;
+            animation-duration: 1s;
+        animation-iteration-count: infinite;
+        }
+        `;
+      
+        document.body.appendChild(css);
+
+
+        
     
 
     }
@@ -62,8 +84,9 @@ class Typewriter extends Component {
     render() {
         return (
             <div className={`typewriter ${this.props.className}`}>       
-                <a href="" className="typewrite" data-period="2000" data-type='[ "I build courses.", "I design apps.", "I develop websites.", "I take photos", "I develop apps", "I develop websites" ]'>
+                <a href="" className="typewrite" data-period="2000" data-type='[ "build courses.", "design apps.", "develop websites.", "take photos", "develop apps", "develop websites" ]'>
                     <span className="wrap"></span>
+                    {/* <div className='cursor-animation'></div> */}
                 </a>
             </div>
         )
