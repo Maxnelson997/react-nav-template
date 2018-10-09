@@ -1,14 +1,13 @@
 
 
 
-
 .layout {
 
     $layout-inset: 200px;
     $layout-inset-small: 10px;
 
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 
     display: grid;
     grid-row-gap: 30px;
