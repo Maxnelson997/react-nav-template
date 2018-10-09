@@ -57,3 +57,83 @@
     }
 }
 
+
+@keyframes hide-card {
+    0% { 
+   
+            opacity: 1;
+            transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+
+    }
+    // 50% {
+   
+    //     opacity: 0.5;
+    //     transform: rotateY(90deg);
+    //     -webkit-transform: rotateY(90deg);
+
+    // }
+    100% { 
+   
+            opacity: 1;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+
+    }
+}
+@keyframes hide-card-j {
+    0% { 
+   
+            opacity: 1;
+            transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+
+    }
+    // 50% {
+   
+    //     opacity: 0.5;
+    //     transform: rotateY(90deg);
+    //     -webkit-transform: rotateY(90deg);
+
+    // }
+    100% { 
+   
+            opacity: 0;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+
+    }
+}
+
+@keyframes show-card {
+    
+    0% { 
+
+
+                opacity: 0;
+                transform: rotateY(-180deg);
+                -webkit-transform: rotateY(-180deg);
+         
+    }
+    100% { 
+
+            opacity: 1;
+            transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+       
+    }
+}
+
+// .card {
+//     &__front {
+//         opacity: 0;
+
+//     }
+//     &__back {
+
+//         transform: rotateY(0deg);
+//         -webkit-transform: rotateY(0deg);
+//         opacity: 1;
+
+//     }
+// }
