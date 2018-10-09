@@ -3,7 +3,6 @@
 // ONLOAD KEYFRAME ANIMATIONS
 
 .card {
-
     &:nth-child(1) {
         -webkit-animation-name: slide-up; /* Safari 4.0 - 8.0 */
         -webkit-animation-duration: 1.25s; /* Safari 4.0 - 8.0 */
@@ -43,11 +42,12 @@
 // HOVER FLIP ANIMATION
 
 .card {
-
+    overflow: hidden;
     &__front,
     &__back {
         grid-column: 1/-1;
         grid-row: 1/-1;
+        
         transition: all 0.5s ease;
     }
 
@@ -85,13 +85,13 @@
 
     @media only screen and (max-width: $break-point) {
         width: 100%;
-        max-height: 200px !important;
+        // max-height: 200px !important;
         height: 200px !important;
     }
 
     
     height: 180px !important; 
-    max-height: 180px !important; 
+    // max-height: 180px !important; 
 
     // &__front, 
     // &__back {
@@ -99,7 +99,7 @@
     // }
 
     &__front {
-        
+   
         @include card-grid;
         & > * {
             grid-column: 1/-1;
@@ -126,7 +126,9 @@
             grid-row: 1/-1;
             height: 100%;
             width: 100%;
+            grid-column: 1/-1;
             object-fit: cover;
+            
         }
     }
 
@@ -168,7 +170,7 @@
             grid-auto-flow: column;
             grid-gap: 20px;
 
- 
+            
             @media screen and (max-width: $break-point) {
                 grid-template-columns: 60px 60px 60px 60px;
 
