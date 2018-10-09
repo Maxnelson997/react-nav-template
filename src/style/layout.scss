@@ -11,9 +11,10 @@
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 40px [home-s nav-s] 100px [nav-e content-s] 1fr [content-e home-e footer-s] 100px [footer-e] 40px;
+    grid-row-gap: 30px;
+    grid-template-rows: 40px [home-s nav-s] auto [nav-e content-s] 1fr [content-e home-e footer-s] auto [footer-e] 40px;
     grid-template-columns: [content-s nav-s] $layout-inset [content-inset-s] 10px [nav-inset-s] 1fr [content-inset-e] 10px [nav-inset-e] $layout-inset [content-s nav-e];
-    @media only screen and (max-width: $break-point) {
+    @media only screen and (max-width: $break-point-two) {
         grid-template-columns: [content-s nav-s] $layout-inset-small [content-inset-s] 10px [nav-inset-s] 1fr [content-inset-e] 10px [nav-inset-e] $layout-inset-small [content-s nav-e];
     }
     // align-items: center;
