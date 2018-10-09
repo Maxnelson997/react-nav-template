@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    // height: auto;
 
     &__title {
         grid-row: 1/-1;
