@@ -26,6 +26,7 @@
     @media only screen and (max-width: $break-point-two) {
         grid-template-columns: [content-s nav-s] $layout-inset-small [content-inset-s] 10px [nav-inset-s] 1fr [content-inset-e] 10px [nav-inset-e] $layout-inset-small [content-s nav-e];
     }
+    
     // align-items: center;
     // justify-items: center;
     // @media only screen and (max-width: 600px) {

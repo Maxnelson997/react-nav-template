@@ -4,6 +4,10 @@
     grid-template-columns: 1fr;
     // height: auto;
 
+    min-height: 80px;
+    align-self: center;
+    margin-top: 10px;
+
     &__title {
         grid-row: 1/-1;
         grid-column: 1/-1;
