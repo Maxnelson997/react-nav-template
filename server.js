@@ -4,6 +4,13 @@ const app = express();
 var secure = require('ssl-express-www');
 
 app.use(secure)
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Cache-Control, Key, Access-Control-Allow-Origin");
+  next();
+});
+
 app.use(express.static(__dirname + '/dist/'));
 app.get(/.*/, function (req, res) {
   res.sendFile(__dirname + '/dist/index.html');
