@@ -6,10 +6,10 @@ class Links extends Component {
         return (
             <div className={`links ${this.props.className}`}>
                 <Link to='/'>HOME</Link>
-                <Link to='/work'>WORK</Link>
-                <Link to='/about'>ABOUT</Link>
+                <Link to='/shop'>SHOP</Link>
+                {/* <Link to='/about'>ABOUT</Link> */}
                 <Link to='/blog'>BLOG</Link>
-                <Link to='/contact'>CONTACT</Link>
+                <Link to='/talk'>TALK</Link>
             </div>
         )
     }
