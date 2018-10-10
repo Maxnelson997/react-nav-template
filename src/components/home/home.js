@@ -136,6 +136,7 @@ class Home extends Component {
             },
             
         ]
+
         const homeTitleAction = {
             title: 'send me a message',
             action: () => console.log('trying to send a message to Max'),

@@ -9,6 +9,7 @@ class BackCard extends Component {
                 <div className='card__back__bg'></div>
                 <h1 className='card__back__title'>{title}</h1>
                 <p className='card__back__info'>{info}</p>
+                <a className='card__back__more' onClick={() => { console.log('what')}}>see more</a>
                 <div className='card__back__projects'>
                     {
                         projects.map((project, index) => {

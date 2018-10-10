@@ -5,7 +5,7 @@
     grid-row-gap: 40px;
 
     & > * {
-        grid-column: 1/-1;
+        grid-column: 1/2;
     }
     &__page-title {
         grid-row: page-title-s/page-title-e;
