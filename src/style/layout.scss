@@ -9,13 +9,14 @@
 }
 
 .layout {
-    grid-row: s/e;
-    grid-column: s/e;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
     // padding: -20px;
     // background: rgb(165, 165, 165);
-    border: 4px solid rgba(165, 165, 165, 0.336);
+    border: 6px solid rgba(43, 43, 43, 0.63);
     
-    $layout-inset: 200px;
+    
+    $layout-inset: 100px;
     $layout-inset-small: 10px;
 
 
