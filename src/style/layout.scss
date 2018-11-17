@@ -68,6 +68,11 @@
         grid-column: nav-inset-s/nav-inset-e;
     }
 
+    &__background {
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+    }
+
     
 }
 
