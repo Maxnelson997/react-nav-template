@@ -1,0 +1,19 @@
+.card-detail {
+        @include card-grid;
+
+        & > * {
+            grid-column: 1/-1;
+            font-family: $raleway;
+        }
+
+        &__title {
+            @include card-title-text;
+            grid-row: 1/2;
+            grid-column: inset-s/inset-e;
+        }
+        &__subtitle {
+            @include card-subtitle-text;
+            grid-row: 2/3;
+            grid-column: inset-s/inset-e;
+        }
+}

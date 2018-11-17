@@ -11,7 +11,7 @@ class PageTitle extends Component {
                 :
                 <h2 className='page-title__sub-title'>{this.props.subtitle}</h2>
                 }
-                <a className='page-title__action' onClick={this.props.action.action}>{this.props.action.title} {this.props.action.icon}</a>
+                {/* <a className='page-title__action' onClick={this.props.action.action}>{this.props.action.title} {this.props.action.icon}</a> */}
             </div>
         )
     }

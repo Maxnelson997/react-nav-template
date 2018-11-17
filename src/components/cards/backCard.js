@@ -14,7 +14,7 @@ class BackCard extends Component {
                     {
                         projects.map((project, index) => {
                             if(index <= 4) {
-                                return <CardProject {...project}/>
+                                return <CardProject key={index} {...project}/>
                             }
                         })
                     }

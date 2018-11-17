@@ -22,12 +22,17 @@ import Find from './components/find';
 import About from './components/about';
 import Unsplash from './components/Unsplash';
 
+
+import CardDetail from './components/cards/detail/cardDetail';
+
 function main() {
   ReactDOM.render(
+    <Provider store={createStoreWithMiddleware(reducers)}>
       <Router history={createBrowserHistory({})}>
         <Layout>
           <Switch>
             <Route path='/' exact component={Home}/>
+            <Route path='/card/:id' component={CardDetail}/>
             <Route path='/contact'  component={Contact}/>
             <Route path='/about'  component={About}/>
             <Route path='/find'  component={Find}/>
@@ -35,6 +40,7 @@ function main() {
           </Switch>
         </Layout>
       </Router>
+    </Provider>
     , document.querySelector('.app-wrapper'));
 }
 
