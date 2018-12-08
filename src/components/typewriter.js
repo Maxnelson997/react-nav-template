@@ -62,7 +62,7 @@ class Typewriter extends Component {
         css.type = "text/css";
  
         css.innerHTML = `.typewrite > .wrap {
-            border-right: 2px solid rgba(120, 120, 120, 0.733);
+            border-right: 2px solid rgba(0, 165, 255, 0.733);
             padding-top: 4px;
             -webkit-animation-name: cursor; /* Safari 4.0 - 8.0 */
             -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */

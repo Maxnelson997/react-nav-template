@@ -1,8 +1,7 @@
 const express = require('express');
-const port = process.env.PORT || 8080;
 const app = express();
 // var secure = require('ssl-express-www');
-// const cors = require('cors');
+const cors = require('cors');
 
 // app.use(secure)
 
@@ -12,12 +11,23 @@ const app = express();
 //   next();
 // });
 
-// app.use(cors())
 
-app.use(express.static(__dirname + '/dist/'));
-app.get(/.*/, function (req, res) {
-  res.sendFile(__dirname + '/dist/index.html');
+app.get('/api', (req, res) => {
+  res.send({hello:'m8'})
 })
-app.listen(port);
 
-console.log("server started");
+
+app.use(cors())
+
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(__dirname + '/dist/'));
+  app.get(/.*/, function (req, res) {
+  res.sendFile(__dirname + '/dist/index.html');
+  })
+}
+
+const PORT = process.env.PORT || 8090;
+
+app.listen(PORT);
+
+console.log('server running on port',PORT);

@@ -1,41 +1,24 @@
 .nav {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: [title-s] 1fr [title-e links-s] 1fr [links-e];
 
     & > * {
         grid-row: 1/-1;
+        grid-column: 1/-1;
+        font-weight: normal;
     }
-
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.3;
+    }
     &__title {
-        grid-column: title-s/title-e;
-
-        @include header-text;
-    }
-
-    &__links {
         justify-self: end;
-        grid-column: links-s/links-e;
-
-        & > * {
-            @include header-text($color: black);
-            text-decoration: none;
-        }
+        align-self: end;
+        font-size: 34px;
+        margin: 20px 40px;
 
     }
+    border-bottom: 1px solid rgb(53, 53, 53);
 }
 
-.links {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
-    grid-column-gap: 12px;
-
-    @media only screen and (max-width: $break-point) {
-        display: none;
-    }
-
-    & > * {
-        grid-row: 1/-1;
-    }
-}

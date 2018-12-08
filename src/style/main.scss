@@ -10,7 +10,11 @@ html {
     box-sizing: inherit;
 }
 
+@import 'variables';
+@import 'mixins';
+
 body {
+    font-family: $raleway;
     overflow-x: hidden;
     font-weight: normal;
 
@@ -20,8 +24,7 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-@import 'variables';
-@import 'mixins';
+
 @import 'layout';
 // @import 'navigation';
 @import 'home/home';
@@ -50,6 +53,10 @@ body {
 @import 'home/home';
 @import 'home/home-card';
 @import 'home/home-cards';
+
+// PROJECT CARDS
+@import 'home/projectCards/project-card';
+@import 'home/projectCards/project-cards';
 
 // UNIVERSAL COMPONENTS
 @import 'universalComponents/background-image';

@@ -21,7 +21,7 @@ class Home extends Component {
                     <Typewriter className='home__title__type-writer'/>
                 </div>
                 {/* <HomeCards className='home__content'/> */}
-                <ProjectCards className='home__content'/>
+                {/* <ProjectCards className='home__content'/> */}
             </div>
         )
     }

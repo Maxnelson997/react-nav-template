@@ -4,8 +4,8 @@
     width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 20px [s] 1fr [e] 20px;
-    grid-template-columns: 20px [s] 1fr [e] 20px;
+    grid-template-rows: 0vw [s] 1fr [e] 0vw;
+    grid-template-columns: 0vw [s] 1fr [e] 0vw;
 }
 
 .layout {
@@ -13,16 +13,16 @@
     grid-column: 1/-1;
     // padding: -20px;
     // background: rgb(165, 165, 165);
-    border: 6px solid rgba(43, 43, 43, 0.63);
+    // border: 6px solid rgba(43, 43, 43, 0.63);
     
     
-    $layout-inset: 100px;
+    $layout-inset: 20vw;
     $layout-inset-small: 10px;
 
 
     display: grid;
     grid-row-gap: 30px;
-    grid-template-rows: 10px [home-s nav-s] auto [nav-e content-s] 1fr [content-e home-e footer-s] auto [footer-e] 10px;
+    grid-template-rows: [home-s nav-s] 24vh [nav-e content-s] 1fr [content-e home-e footer-s] auto [footer-e] 10px;
     grid-template-columns: [content-s nav-s] $layout-inset [content-inset-s] 10px [nav-inset-s] 1fr [nav-inset-e] 10px [content-inset-e] $layout-inset [content-e nav-e];
     @media only screen and (max-width: $break-point-two) {
         grid-template-columns: [content-s nav-s] $layout-inset-small [content-inset-s] 10px [nav-inset-s] 1fr [nav-inset-e] 10px [content-inset-e] $layout-inset-small [content-e nav-e];

@@ -1,0 +1,12 @@
+.project-cards {
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 14px;
+    align-items: center;
+    justify-items: center;
+
+    & > * {
+        grid-column: 1/-1;
+        
+    }
+}

@@ -8,8 +8,12 @@ class ProjectCard extends Component {
            <div className={`${className} project-card`}>
                 <h1 className='project-card__title'>{title}</h1>
                 <h4 className='project-card__subtitle'>{subtitle}</h4>
+                <div className='project-card__line'></div>
                 <div className='project-card__description'>
                     {description}
+                </div>
+                <div className='project-card__mask'>
+
                 </div>
            </div>
        )

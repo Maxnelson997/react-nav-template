@@ -88,7 +88,14 @@ module.exports = webpackMerge(webpackCommon, {
       warnings: true,
       errors: true
     },
-    proxy: proxyRules
+    proxy:{
+      '/api/*' : {
+        target: 'http://localhost:8090/', 
+        changeOrigin: true,
+   
+      }
+    }
+
   }
 
 });

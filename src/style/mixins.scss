@@ -29,3 +29,16 @@
     font-size: 16px;
     color: ghostwhite;
 }
+
+@mixin light-text() {
+    font-size: 2rem;
+    font-weight: 400;
+}
+@mixin normal-text() {
+    font-size: 5rem;
+    font-weight: 400;
+}
+@mixin bold-text() {
+    font-size: 5rem;
+    font-weight: 400;
+}

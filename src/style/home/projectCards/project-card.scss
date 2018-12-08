@@ -1,0 +1,101 @@
+.project-card {
+
+    height: 130px;
+    width: 500px;
+    max-height: 200px;
+    background: white;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.333);
+
+    display: grid;
+    grid-template-rows: 10px [s title-s] 60px [title-e subtitle-s] 10px [subtitle-e line-s] 2px [line-e description-s] minmax(0, 20px) [description-e e] 10px;
+    grid-template-columns: 50px [s] 1fr [e] 50px;
+    grid-row-gap: 10px;
+    // padding: 10px 50px;
+    align-items: end;
+
+    // font-family: $open-sans;
+    font-family: $roboto;
+
+
+
+    & > * { 
+        grid-column: s/e;
+   
+        // font-weight: 400 !important; 
+    }
+    &__title {
+        grid-row: title-s/title-e;
+        @include normal-text;
+        color: #616161;
+    }
+    &__subtitle {
+        grid-row: subtitle-s/subtitle-e;
+        @include light-text;
+        color: #616161;
+    }
+    &__line {
+        grid-row: line-s/line-e;
+
+        background-color: $t1-color-primary;
+        width: 10px;
+    }
+    &__description {
+        grid-row: description-s/description-e;
+        @include light-text;
+        color: #616161;
+    }
+    &__description,
+    &__line {
+        opacity: 0;
+        transition: all .3s ease;
+        // transition-delay: .5s;
+        // transform: translateY(-5px);
+    }
+    &__line {
+        transition: all 2s ease-in-out;
+  
+    }
+
+    &__mask {
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+        background-color: white;
+        z-index: 10;
+        opacity: 0.1;
+    }
+    transition: all .5s ease;
+
+    &:hover {
+         & > * {
+             color: rgb(36, 36, 36);
+      
+         }
+        box-shadow: -1px 2px 5px 3px rgba(0, 0, 0, 0.372);
+        height: 160px;
+
+        // padding: 20px 55px;
+        transform: translateY(-4px);
+        // padding: 13px 53px;
+   
+        .project-card {
+            &__description,
+            &__line {
+                transform: none;
+                opacity: 1;
+                
+            }
+            &__description {
+                // height: 40px;
+            }
+            &__line {
+                width: 100%;
+                height: 2px;
+            }
+            &__mask {
+                opacity: 0;
+            }
+        }    
+    }
+    
+
+}
